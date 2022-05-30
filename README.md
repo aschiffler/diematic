@@ -9,7 +9,7 @@ The sepcial thing about the diematic 3 controler is that it periodically switch 
 
 The basic idea is that the diematic-interface reads the bytes with a timeout of 0.7 seconds. Every time if the exception 'timeout' occure during reading the diematic 3 heating controler is acting as slave.
 
-So there is no need to take care about timing and synchronization. The diematic 3 site controls the timing. Every time it switchs to "slave" -- "stop sending request" a timeout exception occures on the interface site and then it self sends requests.
+So there is no need to take care about timing and synchronization. The diematic 3 site controls the timing. Every time it switchs to "slave" -- "stop sending request" a timeout exception occures on the interface site and then it self sends requests. [See this line](https://github.com/aschiffler/diematic/blob/3ebe4380d6d637f653d2688797195f7d7c3e0c78/diematicinterface/diematicinterface.py#L204) all requests (read registers 0x03 and write registers 0x10) are handled here.
 
 # Installation
 ## Manual Testing
