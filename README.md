@@ -1,6 +1,6 @@
 # Interface to Diematic 3 heating controler via modbus to tcp
 Interface Software written in python to monitor and control the diematic 3 heating control system.
-Based on the aproach from [Benoit](https://github.com/Benoit3/Diematic_to_MQTT) but with a different approach to switch between master and slave in the modbus communication which is independend from clocks and time drift.
+Based on the aproach from [Benoit](https://github.com/Benoit3/Diematic_to_MQTT) but with a different approach to switch between master and slave in the modbus communication which is independent from clocks and time drift.
 
 # Architecture and Comunication Approach
 ![](doc/diematic_arch.png)
@@ -14,9 +14,10 @@ So there is no need to take care about timing and synchronization. The diematic 
 # Installation
 ## Manual Testing
 change the values in the main source file:
-- ip address and port of the RS485 to tcp server  (eg. IP: 192.168.178.7 Port: 88)
-- ip address and port of the mqtt broker          (eg. IP: 127.0.0.1 port: 1883)
-- the root topic of the mqtt publication / subscribtion
+- ip address and port of the RS485 to tcp server [here](https://github.com/aschiffler/diematic/blob/3ebe4380d6d637f653d2688797195f7d7c3e0c78/diematicinterface/diematicinterface.py#L356)  (eg. IP: 192.168.178.7 Port: 88)
+- ip address and port of the mqtt broker [here](https://github.com/aschiffler/diematic/blob/3ebe4380d6d637f653d2688797195f7d7c3e0c78/diematicinterface/diematicinterface.py#L350)
+)          (eg. IP: 127.0.0.1 port: 1883)
+- the root topic of the mqtt publication / subscribtion [here](https://github.com/aschiffler/diematic/blob/3ebe4380d6d637f653d2688797195f7d7c3e0c78/diematicinterface/diematicinterface.py#L358)
 ```python
 cd diematicinterface
 python3 diematicinterface.py
