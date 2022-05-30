@@ -5,7 +5,7 @@ Based on the aproach from [Benoit](https://github.com/Benoit3/Diematic_to_MQTT) 
 # Architecture and Comunication Approach
 ![](doc/diematic_arch.png)
 
-The sepcial thing about the diematic 3 controler is that it periodically switch between master and slave mode for the communication. It uses a modbus speification.
+The special thing about the diematic 3 controler is that it periodically switch between master and slave mode for the communication. It uses a modbus specification.
 
 The basic idea is that the diematic-interface reads the bytes with a timeout of 0.7 seconds. Every time if the exception 'timeout' occure during reading the diematic 3 heating controler is acting as slave.
 
